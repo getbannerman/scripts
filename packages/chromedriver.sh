@@ -13,6 +13,7 @@ set -e
 CACHED_DOWNLOAD="${HOME}/cache/chromedriver_linux64_${CHROMEDRIVER_VERSION}.zip"
 
 rm -rf "${HOME}/bin/chromedriver"
+touch ${CACHED_DOWNLOAD}
 wget --continue --output-document "${CACHED_DOWNLOAD}" "http://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
 unzip -o "${CACHED_DOWNLOAD}" -d "${HOME}/bin"
 
